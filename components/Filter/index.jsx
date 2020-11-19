@@ -46,7 +46,7 @@ const Filter = ({ onFilterChange }) => {
   }, [launchYear, successfulLaunch, successfulLanding]);
 
   return (
-    <Card>
+    <Card width="160px">
       <h4>Filters</h4>
       {/* ----------- */}
       <FilterWrapper>

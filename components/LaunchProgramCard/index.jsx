@@ -42,11 +42,11 @@ const LaunchProgramCard = ({ data }) => (
         </ProgramTitle>
         <b>Mission Ids: </b>
         {data.mission_id.length
-          && (
-          <ul>
-            {data.mission_id.map((missionId) => <li>{missionId}</li>)}
-          </ul>
-          )}
+          ? (
+            <ul>
+              {data.mission_id.map((missionId) => <li>{missionId}</li>)}
+            </ul>
+          ) : ''}
         <p>
           <b>Launch year: </b>
           <span>{data.launch_year}</span>
