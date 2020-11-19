@@ -15,7 +15,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Lighthouse Score
 #### Mobile
-![alt spacex launch program mobile](https://drive.google.com/file/d/1OUmtXLw7Nl0aN6x3035i1HomaWCgKmoU/view?usp=sharing)
+![spacex launch program mobile](https://i.imgur.com/Hqfh1LO_d.webp?maxwidth=760&fidelity=grand)
 #### Desktop
-![alt spacex launch program desktop](https://drive.google.com/file/d/1nRGeOh79gZQ0jvSY_URsi4qhaWyOVrD5/view?usp=sharing)
+![spacex launch program desktop](https://i.imgur.com/P4H6iqV_d.webp?maxwidth=760&fidelity=grand)
 
