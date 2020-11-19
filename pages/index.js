@@ -14,14 +14,18 @@ const Home = (props) => {
   return (
     <>
       <Head>
-        <title>SpaceEx Launch programs</title>
+        <title>SpacEx Launch programs</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans" rel="stylesheet" />
+        <meta
+          name="description"
+          content="SpacEx Launch programs: browse all launches by SpaceX program"
+        />
       </Head>
 
       <Container>
-        <Title>SpaceEx Launch programs</Title>
+        <Title>SpacEx Launch programs</Title>
         <MainContainer launches={launches} />
       </Container>
 

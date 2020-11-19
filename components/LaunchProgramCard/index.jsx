@@ -33,7 +33,14 @@ const LaunchProgramCard = ({ data }) => (
       {/* --------- */}
       <ImageContainer>
         {data.links.mission_patch_small
-          && <Image src={data.links.mission_patch_small} width={200} height={200} />}
+          && (
+          <Image
+            src={data.links.mission_patch_small}
+            alt={data.mission_name}
+            width={200}
+            height={200}
+          />
+          )}
       </ImageContainer>
       {/* --------- */}
       <ProgramDetailsWrapper>
@@ -44,7 +51,7 @@ const LaunchProgramCard = ({ data }) => (
         {data.mission_id.length
           ? (
             <ul>
-              {data.mission_id.map((missionId) => <li>{missionId}</li>)}
+              {data.mission_id.map((missionId) => <li key={missionId}>{missionId}</li>)}
             </ul>
           ) : ''}
         <p>

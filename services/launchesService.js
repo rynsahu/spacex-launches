@@ -3,7 +3,7 @@ import http from './httpService';
 const apiEndPoint = 'https://api.spacexdata.com/v3';
 
 /**
- * Get spaceEx launch programs list with optional
+ * Get spaceX launch programs list with optional
  * filters - year, launchSuccess, landSuccess
  *
  * @param year
