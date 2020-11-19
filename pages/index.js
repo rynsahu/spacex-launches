@@ -37,7 +37,7 @@ const Home = (props) => {
 };
 
 export async function getStaticProps() {
-  const res = await launchesService.getLaunchList(20);
+  const res = await launchesService.getLaunchList();
   return { props: { launches: res.data } };
 }
 

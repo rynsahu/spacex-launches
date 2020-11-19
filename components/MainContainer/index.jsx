@@ -22,7 +22,6 @@ const MainContainer = ({ launches }) => {
   useEffect(async () => {
     const { launchYear, successfulLaunch, successfulLanding } = filter;
     const res = await launchesService.getLaunchList(
-      10,
       launchYear,
       successfulLaunch,
       successfulLanding,

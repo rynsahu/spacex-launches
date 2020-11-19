@@ -1,6 +1,6 @@
 const theme = {
   color: {
-    primary: 'read',
+    primary: '#454D99',
     bg: '#F2F2F2',
   },
 };
