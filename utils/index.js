@@ -17,9 +17,16 @@ export const generateQueryString = (paramsObject) => {
 };
 
 /**
+ * Check the current context is browser or not
+ */
+export const isBrowser = () => typeof window !== 'undefined';
+
+/**
  * Get all query params
  */
 export const getQueryParams = () => {
+  if (!isBrowser()) return {};
+
   const urlParams = new URLSearchParams(window.location.search);
   const query = {};
 
@@ -34,6 +41,8 @@ export const getQueryParams = () => {
  * @param {*} paramName
  */
 export const getQueryParamByName = (paramName) => {
+  if (!isBrowser()) return '';
+
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(paramName);
 };
@@ -41,4 +50,5 @@ export const getQueryParamByName = (paramName) => {
 export default {
   generateQueryString,
   getQueryParams,
+  isBrowser,
 };
