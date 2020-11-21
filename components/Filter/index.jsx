@@ -110,16 +110,16 @@ const Filter = () => {
       <FilterWrapper>
         <SubTitle>Successful Launch</SubTitle>
         <FilterButtonsWrapper>
-          <Button type="button" onClick={() => setSuccessfulLaunch(true)}>True</Button>
-          <Button type="button" onClick={() => setSuccessfulLaunch(false)}>False</Button>
+          <Button type="button" onClick={() => setSuccessfulLaunch('true')}>True</Button>
+          <Button type="button" onClick={() => setSuccessfulLaunch('false')}>False</Button>
         </FilterButtonsWrapper>
       </FilterWrapper>
       {/* ----------- */}
       <FilterWrapper>
         <SubTitle>Successful Landing</SubTitle>
         <FilterButtonsWrapper>
-          <Button type="button" onClick={() => setSuccessfulLanding(true)}>True</Button>
-          <Button type="button" onClick={() => setSuccessfulLanding(false)}>False</Button>
+          <Button type="button" onClick={() => setSuccessfulLanding('true')}>True</Button>
+          <Button type="button" onClick={() => setSuccessfulLanding('false')}>False</Button>
         </FilterButtonsWrapper>
       </FilterWrapper>
     </Card>

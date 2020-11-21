@@ -9,7 +9,9 @@ export const generateQueryString = (paramsObject) => {
 
   const queryString = [];
 
-  Object.keys(paramsObject).forEach((key) => String(paramsObject[key]) && queryString.push(`${key}=${paramsObject[key]}`));
+  Object.keys(paramsObject).forEach((key) => (
+    paramsObject[key] != null && String(paramsObject[key]) && queryString.push(`${key}=${paramsObject[key]}`)
+  ));
 
   return queryString.join('&');
 };
