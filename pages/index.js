@@ -1,5 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // Components
 import Container from '../components/Core/Container';
 import Title from '../components/Core/Typography/Title';
@@ -25,6 +27,7 @@ const Home = (props) => {
       </Head>
 
       <Container>
+        <ToastContainer />
         <Title>SpacEx Launch programs</Title>
         <MainContainer launches={launches} />
       </Container>

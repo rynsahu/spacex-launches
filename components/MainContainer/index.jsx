@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
-import Filter from '../Filter';
-import LaunchPrograms from '../LaunchPrograms';
+
+// utils
+import { getQueryParams } from '../../utils';
+
 // Services
 import launchesService from '../../services/launchesService';
+
+// Components
+import Filter from '../Filter';
+import LaunchPrograms from '../LaunchPrograms';
 
 const StyledMainContainer = styled.div`
   display: flex;
@@ -16,25 +23,26 @@ const StyledMainContainer = styled.div`
 `;
 
 const MainContainer = ({ launches }) => {
-  const [filter, setFilter] = useState({});
+  const router = useRouter();
   const [filteredLaunches, setFilteredLaunches] = useState(null);
 
   useEffect(async () => {
-    const { launchYear, successfulLaunch, successfulLanding } = filter;
+    const { launch_year, launch_success, landing_success } = getQueryParams();
+
     const res = await launchesService.getLaunchList(
-      launchYear,
-      successfulLaunch,
-      successfulLanding,
+      launch_year,
+      launch_success,
+      landing_success,
     );
 
     setFilteredLaunches(res.data);
-  }, [filter]);
+  }, [router.query]);
 
   return (
     <StyledMainContainer>
       {/* Filter Section */}
       <section>
-        <Filter onFilterChange={(filters) => setFilter(filters)} />
+        <Filter />
       </section>
       {/* Launch Programs */}
       <section>

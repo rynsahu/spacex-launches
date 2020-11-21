@@ -1,6 +1,7 @@
+import config from '../config.json';
 import http from './httpService';
 
-const apiEndPoint = 'https://api.spacexdata.com/v3';
+const apiEndPoint = config.spacexDataAPIBaseUrl;
 
 /**
  * Get spaceX launch programs list with optional

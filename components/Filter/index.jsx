@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
+
+// utils
+import { getQueryParamByName, generateQueryString } from '../../utils';
+import {
+  FILTER_BY_LAUNCH_YEAR,
+  FILTER_BY_LAUNCH_SUCCESS,
+  FILTER_BY_LANDING_SUCCESS,
+} from '../../constants/launchProgram';
+
+// Components
 import Card from '../Core/Card';
 import SubTitle from '../Core/Typography/SubTitle';
 
@@ -30,19 +41,31 @@ const Button = styled.button`
   }
 `;
 
-const Filter = ({ onFilterChange }) => {
+const Filter = () => {
+  const router = useRouter();
+
   const [launchYear, setLaunchYear] = useState('');
   const [successfulLaunch, setSuccessfulLaunch] = useState('');
   const [successfulLanding, setSuccessfulLanding] = useState('');
 
-  useEffect(() => {
-    const filter = {
-      launchYear,
-      successfulLaunch,
-      successfulLanding,
+  /**
+   * Generate query string and add into URL
+   */
+  const handleQueryString = () => {
+    const paramsObject = {
+      [FILTER_BY_LAUNCH_YEAR]: launchYear || getQueryParamByName(FILTER_BY_LAUNCH_YEAR),
+      [FILTER_BY_LAUNCH_SUCCESS]: successfulLaunch || getQueryParamByName(FILTER_BY_LAUNCH_SUCCESS),
+      [FILTER_BY_LANDING_SUCCESS]:
+        successfulLanding || getQueryParamByName(FILTER_BY_LANDING_SUCCESS),
     };
 
-    if (onFilterChange) onFilterChange(filter);
+    const queryString = generateQueryString(paramsObject);
+
+    if (queryString) router.push(`/?${queryString}`, undefined, { shallow: true });
+  };
+
+  useEffect(() => {
+    handleQueryString();
   }, [launchYear, successfulLaunch, successfulLanding]);
 
   return (
