@@ -12,7 +12,7 @@ const LaunchPrograms = ({ launches }) => (
     {
       launches
         ? launches.map((launch) => (
-          <LaunchProgramCard key={launch.launch_date_unix} data={launch} />
+          <LaunchProgramCard key={launch.flight_number} data={launch} />
         )) : null
     }
   </Wrapper>

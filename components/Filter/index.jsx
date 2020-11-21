@@ -35,10 +35,6 @@ const Button = styled.button`
   :hover {
     background-color: #76BD00;
   }
-
-  :focus {
-    outline: none;
-  }
 `;
 
 const Filter = () => {
