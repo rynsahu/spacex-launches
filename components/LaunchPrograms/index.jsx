@@ -5,6 +5,10 @@ import LaunchProgramCard from '../LaunchProgramCard';
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 700px){
+    justify-content: center;
+  }
 `;
 
 const LaunchPrograms = ({ launches }) => (

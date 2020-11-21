@@ -16,6 +16,7 @@ const StyledMainContainer = styled.div`
   display: flex;
   margin: 20px 0;
   flex-wrap: wrap;
+  justify-content: center;
 
   section:nth-child(2) {
     flex: 1;
