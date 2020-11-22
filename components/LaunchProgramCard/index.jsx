@@ -34,12 +34,12 @@ const LaunchProgramCard = ({ data }) => (
       <ImageContainer>
         {data.links.mission_patch_small
           && (
-          <Image
-            src={data.links.mission_patch_small}
-            alt={data.mission_name}
-            width={200}
-            height={200}
-          />
+            <Image
+              src={data.links.mission_patch_small}
+              alt={data.mission_name}
+              width={200}
+              height={200}
+            />
           )}
       </ImageContainer>
       {/* --------- */}
@@ -64,7 +64,12 @@ const LaunchProgramCard = ({ data }) => (
         </p>
         <p>
           <b>Successful Landing: </b>
-          <span>{data.launch_landing}</span>
+          <span>
+            {
+              data.rocket.first_stage.cores[0].land_success !== null
+              && String(data.rocket.first_stage.cores[0].land_success)
+            }
+          </span>
         </p>
       </ProgramDetailsWrapper>
     </Card>
