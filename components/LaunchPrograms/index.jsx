@@ -6,6 +6,14 @@ const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
 
+  #noRecordFound {
+    display: flex;
+    width:100%;
+    height: 55vh;
+    justify-content: center;
+    align-items: center;
+  }
+
   @media (max-width: 700px){
     justify-content: center;
   }
@@ -14,10 +22,10 @@ const Wrapper = styled.div`
 const LaunchPrograms = ({ launches }) => (
   <Wrapper>
     {
-      launches
+      launches && launches.length
         ? launches.map((launch) => (
           <LaunchProgramCard key={launch.flight_number} data={launch} />
-        )) : null
+        )) : <div id="noRecordFound"><p>No launches found.</p></div>
     }
   </Wrapper>
 );
