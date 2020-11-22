@@ -25,7 +25,7 @@ const LaunchPrograms = ({ launches }) => (
       launches && launches.length
         ? launches.map((launch) => (
           <LaunchProgramCard key={launch.flight_number} data={launch} />
-        )) : <div id="noRecordFound"><p>No launches found.</p></div>
+        )) : <div id="noRecordFound"><p>No launch program found.</p></div>
     }
   </Wrapper>
 );
