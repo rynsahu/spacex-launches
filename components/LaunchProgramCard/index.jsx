@@ -5,8 +5,7 @@ import Card from '../Core/Card';
 
 const ImageContainer = styled.div`
   background-color: ${({ theme }) => theme.color.bg};
-  width: 200px;
-  height: 200px;
+  text-align: center
 `;
 
 const ProgramTitle = styled.h1`
@@ -16,7 +15,11 @@ const ProgramTitle = styled.h1`
 `;
 
 const ProgramDetailsWrapper = styled.div`
-  max-width: 200px;
+ width: 183px;
+
+  @media (min-width: 1024px){
+    width: 160px;
+  }
 
   li, span {
     color: ${({ theme }) => theme.color.primary};
@@ -37,8 +40,8 @@ const LaunchProgramCard = ({ data }) => (
             <Image
               src={data.links.mission_patch_small}
               alt={data.mission_name}
-              width={200}
-              height={200}
+              width={160}
+              height={160}
             />
           )}
       </ImageContainer>

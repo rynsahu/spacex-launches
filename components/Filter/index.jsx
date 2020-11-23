@@ -22,7 +22,7 @@ const FilterWrapper = styled.div`
 const FilterButtonsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 10px 5px;
+  margin: 10px 8px;
 `;
 
 const Button = styled.button`
@@ -74,7 +74,7 @@ const Filter = () => {
   }, [launchYear, successfulLaunch, successfulLanding]);
 
   return (
-    <Card width="160px">
+    <Card width="160px" style={{ margin: '10px auto' }}>
       <h4>Filters</h4>
       {/* ----------- */}
       <FilterWrapper>

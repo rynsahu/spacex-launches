@@ -16,10 +16,18 @@ const StyledMainContainer = styled.div`
   display: flex;
   margin: 20px 0;
   flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
 
   section:nth-child(2) {
     flex: 1;
+  }
+
+  @media (min-width: 700.98px) and (max-width: 1023.98px){
+    flex-direction: row;
+  }
+
+  @media (min-width: 1024px){
+    flex-direction: row;
   }
 `;
 
