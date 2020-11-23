@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   max-width: 200px;
   margin: auto;
+  justify-content:center;
 
   #noRecordFound {
     display: flex;
@@ -15,10 +16,6 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
   }
-
-  /* @media (max-width: 700px){
-    justify-content: center;
-  } */
 
   @media (min-width: 700.98px) and (max-width: 1023.98px){
     max-width: 446px;
